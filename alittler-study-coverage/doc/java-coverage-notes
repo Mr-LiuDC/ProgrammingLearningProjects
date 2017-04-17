@@ -1,0 +1,48 @@
+	Java覆盖率测试
+		一、使用Cobertura
+			1、在pom.xml中加入Cobertura依赖，如果不使用也可以不加依赖，Maven以集成Cobertura
+				<dependency>
+					<groupId>net.sourceforge.cobertura</groupId>
+					<artifactId>cobertura</artifactId>
+					<version>2.1.1</version>
+				</dependency>
+			2、编写代码CoberturaSimple.java、测试代码CoberturaSimpleTest.java
+			3、run as Maven build命令：cobertura:cobertura
+			
+		二、使用Jacoco
+			1、在pom.xml中加入Maven的jacoco插件配置
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>cobertura-maven-plugin</artifactId>
+					<version>2.7</version>
+				</plugin>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.7.9</version>
+					<executions>
+						<execution>
+							<id>default-prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>default-report</id>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>default-check</id>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				
+			2、编写代码InputNumb.java、测试代码InputNumbTest.java
+			3、run as  命令：Maven isntall
+			
