@@ -24,5 +24,6 @@
 	<mappers>
 		<mapper resource="EmployeeMapper.xml" />
 		<mapper resource="cn/alittler/mapper/DemoUserMapper.xml"/>
+		<mapper resource="cn/alittler/demo/mapper/DemoUserMapper.xml"/>
 	</mappers>
 </configuration>
