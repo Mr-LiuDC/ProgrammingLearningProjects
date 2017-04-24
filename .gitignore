@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -33,4 +34,41 @@ alittler-javaweb-practice/
 Python2.7Practice/
 Python3.6Practice/
 /Python2.7Practice
+=======
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Others ###
+.metadata/
+.settings/
+
+
+Spider-T-REXs/
+alittler-javaweb-practice/
+Python2.7Practice/
+Python3.6Practice/
+/Python2.7Practice
+>>>>>>> f6eb12023d8c6a7a10100b727f3bebf41e158f7b
 /Python3.6Practice
