@@ -3,7 +3,14 @@ package cn.alittler.study.java.code.encode;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
+import org.junit.Test;
+
 public class EncodeByMD5 {
+	
+	@Test
+	public void testMD5() {
+		System.out.println(getMD5Encode("刘德财"));
+	}
 
 	public String getMD5Encode(String str) {
 		String newStr = "";
