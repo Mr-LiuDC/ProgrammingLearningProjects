@@ -10,6 +10,11 @@ public class CleanMvn {
 		findAndDelete(new File("G:\\.m2\\repository"));
 	}
 
+	@Test
+	public void test2() {
+		findAndDelete(new File("C:\\Users\\liude\\.m2\\repository"));
+	}
+
 	public static boolean findAndDelete(File file) {
 		if (!file.exists()) {
 		} else if (file.isFile()) {
