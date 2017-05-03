@@ -44,5 +44,7 @@
 				</plugin>
 				
 			2、编写代码InputNumb.java、测试代码InputNumbTest.java
-			3、run as  命令：Maven isntall
+			3、run as  命令：Maven isntall;或者先maven test 再jacoco:report
+			
+			
 			
