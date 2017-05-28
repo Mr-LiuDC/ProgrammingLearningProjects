@@ -6,9 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestBrowser {
 
 	public static void main(String[] args) throws Exception {
+		System.setProperty("webdriver.chrome.driver", "./chrome/chromedriver.exe");
 		// WebDriver driver = new FirefoxDriver();
 		WebDriver driver = new ChromeDriver();
-		testBrowser(driver);
+		driver.get("http://www.baidu.com");
 	}
 
 	public static void testBrowser(WebDriver driver) throws Exception {
@@ -17,7 +18,7 @@ public class TestBrowser {
 		// 浏览器最大化
 		driver.manage().window().maximize();
 
-		driver.navigate().to("http://www.baidu.com");
+		driver.navigate().to("https://www.baidu.com");
 		// 刷新浏览器
 		driver.navigate().refresh();
 		// 浏览器后退
