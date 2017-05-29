@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class TestBrowser {
 
@@ -12,6 +13,7 @@ public class TestBrowser {
 		System.setProperty("webdriver.chrome.driver", "./chrome/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.baidu.com");
+		driver.quit();
 	}
 
 	@Test
@@ -19,6 +21,15 @@ public class TestBrowser {
 		System.setProperty("webdriver.gecko.driver", "./gecko/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.baidu.com");
+		driver.quit();
+	}
+	
+	@Test
+	public void testIEDriverServer() {
+		System.setProperty("webdriver.ie.driver", "./iedriver/IEDriverServer.exe");
+		WebDriver driver = new InternetExplorerDriver();
+		driver.get("https://www.baidu.com");
+		driver.quit();
 	}
 	
 	@Test
