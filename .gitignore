@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+### Maven ###
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
@@ -29,15 +29,6 @@ nbdist/
 .settings/
 
 
-Spider-T-REXs/
-alittler-javaweb-practice/
-Python2.7Practice/
-Python3.6Practice/
-/Python2.7Practice
-=======
-target/
-!.mvn/wrapper/maven-wrapper.jar
-
 ### STS ###
 .apt_generated
 .classpath
@@ -67,8 +58,4 @@ nbdist/
 
 Spider-T-REXs/
 alittler-javaweb-practice/
-Python2.7Practice/
-Python3.6Practice/
-/Python2.7Practice
->>>>>>> f6eb12023d8c6a7a10100b727f3bebf41e158f7b
-/Python3.6Practice
+
