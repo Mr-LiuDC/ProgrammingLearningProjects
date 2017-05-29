@@ -1,0 +1,10 @@
+# Eclipse or MyEclipse
+.settings/
+.project
+.pydevproject
+# 忽略编译后的文件
+*.pyc
+
+__pycache__/
+*.py[cod]
+*$py.class
