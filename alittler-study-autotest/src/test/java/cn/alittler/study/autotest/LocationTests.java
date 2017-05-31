@@ -55,7 +55,9 @@ public class LocationTests {
 			e.printStackTrace();
 		}
 		driver.quit();
-	}@Test
+	}
+	
+	@Test
 	public void test3() {
 		System.setProperty("webdriver.gecko.driver", "./gecko/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
