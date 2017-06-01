@@ -17,4 +17,9 @@ public class HomeController {
 		return "Hello World.----这是home";
 	}
 
+	@RequestMapping("/hello")
+	public String hello() {
+		return "Hello World";
+	}
+
 }
