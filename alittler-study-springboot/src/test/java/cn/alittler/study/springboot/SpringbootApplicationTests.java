@@ -1,9 +1,7 @@
 package cn.alittler.study.springboot;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
+import cn.alittler.study.springboot.component.BlogProperties;
+import cn.alittler.study.springboot.controller.HomeController;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.Assert;
@@ -12,14 +10,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import cn.alittler.study.springboot.component.BlogProperties;
-import cn.alittler.study.springboot.controller.HomeController;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -45,7 +45,17 @@ public class SpringbootApplicationTests {
 
 	@Test
 	public void getHome() throws Exception {
+		HttpHeaders headers = new HttpHeaders();  // 还是不能解决乱码问题
+		headers.add("Content-Type", "application/json; charset=utf-8");
 		mvc.perform(MockMvcRequestBuilders.get("/home").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+				.andExpect(content().string(equalTo("Hello World.----这是home")));
+	}
+
+	@Test
+	public void getHome2() throws Exception {
+		HttpHeaders headers = new HttpHeaders();  // 还是不能解决乱码问题
+		headers.add("Content-Type", "application/json; charset=utf-8");
+		mvc.perform(MockMvcRequestBuilders.get("/home").accept(MediaType.APPLICATION_JSON_UTF8)).andExpect(status().isOk())
 				.andExpect(content().string(equalTo("Hello World.----这是home")));
 	}
 	////////////////////// 模拟url请求测试 //////////////////////
