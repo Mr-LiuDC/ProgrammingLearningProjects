@@ -2,8 +2,6 @@
 spring:
   profiles:
     active: dev
-  thymeleaf:
-    enabled: true
     
 
 
