@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import cn.alittler.study.springboot.model.User;
 
 @RestController
-@RequestMapping(value = "/users") // 通过这里配置使下面的映射都在/users下，可去除。
+@RequestMapping(value = "/users1") // 通过这里配置使下面的映射都在/users下，可去除。
 public class UserController {
 
 	static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
