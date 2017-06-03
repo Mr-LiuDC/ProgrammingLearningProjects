@@ -5,6 +5,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import cn.alittler.study.springboot.exception.MyException;
+
 @Controller
 @RequestMapping("/")
 public class HomeController {
@@ -37,6 +39,16 @@ public class HomeController {
 	public String freeMarker(ModelMap map) {
 		map.addAttribute("name", "刘德财");
 		return "freemarker/freemarker";
+	}
+
+	@RequestMapping("/error1")
+	public String error1() throws Exception {
+		throw new Exception("发生错误");
+	}
+
+	@RequestMapping("/json")
+	public String json() throws MyException {
+		throw new MyException("发生错误2");
 	}
 
 }
